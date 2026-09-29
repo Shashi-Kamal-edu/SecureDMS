@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-slate-100 text-ink-900 font-sans;
+  }
+  ::selection {
+    @apply bg-brand-200;
+  }
+  *:focus-visible {
+    outline: 2px solid #4F5FE0;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(15, 26, 43, 0.18);
+    border-radius: 999px;
+  }
+}
+
+.hash-text {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  letter-spacing: -0.01em;
+}
+
+.input {
+  @apply w-full text-sm border border-slate-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-brand-200 focus:border-brand-400 bg-white;
+}
